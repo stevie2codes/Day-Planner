@@ -4,6 +4,10 @@ body {
   line-height: 1;
 }
 
+.lead{
+  font-size: 2rem;
+}
+
 textarea{
   background: transparent;
   border: none;
