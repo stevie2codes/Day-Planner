@@ -12,11 +12,16 @@
 
 
 $(document).ready(function(){
-
+ 
+    //add current day into jumbotron
     let currentDate = moment().format('LLLL');
-    console.log(currentDate);
-
     $("#currentDay").text(currentDate);
+
+    //getting current hour in normal time
+    let now = moment();
+   let hour = now.hour();
+   let formatHour = now.format('h');
+   console.log(formatHour);
 
 
 

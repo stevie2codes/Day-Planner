@@ -15,6 +15,7 @@ textarea{
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  /* padding-bottom: 5px; */
 }
 
 .jumbotron {
@@ -32,6 +33,7 @@ textarea{
 .time-block{
   text-align: center;
   border-radius: 15px;
+  background-color: #d3d3d3;
 }
 
 .row {
@@ -41,6 +43,8 @@ textarea{
 }
 
 .hour {
+  margin-bottom: -20px;
+  text-align: center;
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
