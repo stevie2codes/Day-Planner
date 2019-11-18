@@ -40,9 +40,25 @@ $(document).ready(function () {
                 }
     }
 
+    let textArea = $("#text-area");
+    function save(){
+        
+        localStorage.setItem('text', JSON.stringify(textArea.val()));
+    
+        let storedValue = JSON.parse(localStorage.getItem('text'));
+        if(storedValue) {
+            $("#text-area").val() = storedValue;
+            textArea.text(storedValue);
+        }
+    }
+
+        $(".saveBtn").on("click",function(event){
+            event.preventDefault();
+             save();
+        });
 
 
-
+      
 
 
 
