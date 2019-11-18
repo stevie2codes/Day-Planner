@@ -11,17 +11,36 @@
 
 
 
-$(document).ready(function(){
- 
+$(document).ready(function () {
+
     //add current day into jumbotron
     let currentDate = moment().format('LLLL');
     $("#currentDay").text(currentDate);
 
     //getting current hour in normal time
     let now = moment();
-   let hour = now.hour();
-   let formatHour = now.format('h');
-   console.log(formatHour);
+    let hour = now.hour();
+    let formatHour = now.format('h');
+    console.log(formatHour);
+
+
+    let timeBlocks = $(".time-block");
+    for (let i = 0; i < timeBlocks.length; i++) {
+        let blockTime = $(timeBlocks[i]);
+        let hourId = blockTime.attr("id");
+
+        if (hourId === formatHour) {
+            $(blockTime).addClass("present");
+        } 
+            if (moment(hourId).isBefore(formatHour)) {
+                $(blockTime).addClass("past");
+            } 
+                if (moment(hourId).isAfter(formatHour)) {
+                    $(blockTime).addClass("future");
+                }
+    }
+
+
 
 
 

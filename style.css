@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: white;
 }
 
 .lead{
@@ -15,7 +16,6 @@ textarea{
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
-  /* padding-bottom: 5px; */
 }
 
 .jumbotron {
@@ -33,7 +33,7 @@ textarea{
 .time-block{
   text-align: center;
   border-radius: 15px;
-  background-color: #d3d3d3;
+  /* background-color: #d3d3d3; */
 }
 
 .row {
@@ -69,7 +69,7 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color:  #3691EF; 
   color: white;
 }
 
