@@ -40,21 +40,21 @@ $(document).ready(function () {
                 }
     }
 
-    let textArea = $("#text-area");
-    function save(){
-        
-        localStorage.setItem('text', JSON.stringify(textArea.val()));
-    
-        let storedValue = JSON.parse(localStorage.getItem('text'));
-        if(storedValue) {
-            $("#text-area").val() = storedValue;
-            textArea.text(storedValue);
-        }
-    }
+    let textArea = $("#text-area"); //comment input
+    let timeBlock = $(".time-block"); //comment placement
+    let saveBtn = $("#saveBtn"); //save button
 
+    
+
+    let storedValue = JSON.parse(localStorage.getItem('text'));
+        if(storedValue) {
+            textArea.html(storedValue);
+            
+        }
         $(".saveBtn").on("click",function(event){
             event.preventDefault();
-             save();
+            localStorage.setItem('text', JSON.stringify(textArea.val()));
+             
         });
 
 
