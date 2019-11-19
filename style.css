@@ -8,6 +8,9 @@ body {
 .lead{
   font-size: 2rem;
 }
+.far{
+  font-size: 1.6rem;
+}
 
 textarea{
   background: transparent;

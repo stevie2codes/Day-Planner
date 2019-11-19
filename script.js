@@ -21,37 +21,34 @@ $(document).ready(function () {
     let now = moment();
     let hour = now.hour();
     let formatHour = now.format('ha');
-    console.log(formatHour);
-
     let timeBlocks = $(".time-block");
+   
 
+//setting colors to relevant time
     for (let i = 0; i < timeBlocks.length; i++) {
         let blockTime = $(timeBlocks[i]);
         let hourId = blockTime.attr("id");
-        console.log(hourId);
-        
-        
+
         if (hourId === formatHour) {
             $(blockTime).children(".row").addClass("present");
         }
-        if (moment(hourId,"ha").isBefore()) {
+        if (moment(hourId, "ha").isBefore()) {
             $(blockTime).children(".row").addClass("past");
         } else
-            if (moment(hourId,"ha").isAfter()) {
+            if (moment(hourId, "ha").isAfter()) {
                 $(blockTime).children(".row").addClass("future");
             }
     }
+
     let textArea = $("#text-area"); //comment input
-
-    let saveBtn = $("#saveBtn"); //save button
-
-
+    let saveBtn = $(".saveBtn"); //save button
+    
 
     let storedValue = JSON.parse(localStorage.getItem('text'));
     if (storedValue) {
         textArea.html(storedValue);
-
     }
+
     $(".saveBtn").on("click", function (event) {
         event.preventDefault();
         localStorage.setItem('text', JSON.stringify(textArea.val()));
