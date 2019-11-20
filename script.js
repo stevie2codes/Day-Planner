@@ -40,18 +40,18 @@ $(document).ready(function () {
             }
     }
 
-    let textArea = $("#text-area"); //comment input
+    // let textArea = $("#text-area"); //comment input
     let saveBtn = $(".saveBtn"); //save button
 
     //setting a function for save button clicked 
-    function saveInput(event){
+    function saveInput(event) {
         event.preventDefault();
       let hour =  $(this).parent().parent().attr("id");
       let input = $(this).siblings("textarea").val();
       localStorage.setItem(hour,input);
-    }
+    };
     
-
+// setting variables that target the specific textarea
     let nine = $("#9am").children(".row").children("textarea");
     let ten = $("#10am").children(".row").children("textarea");
     let eleven = $("#11am").children(".row").children("textarea");
@@ -62,6 +62,7 @@ $(document).ready(function () {
     let four = $("#4pm").children(".row").children("textarea");
     let five = $("#5pm").children(".row").children("textarea");
 
+    // displaying the stored value into the text area
     nine.text(localStorage.getItem("9am"));
     ten.text(localStorage.getItem("10am"));
     eleven.text(localStorage.getItem("11am"));
@@ -72,7 +73,9 @@ $(document).ready(function () {
     four.text(localStorage.getItem("4pm"));
     five.text(localStorage.getItem("5pm"));
 
-    saveBtn.on('click',saveInput);
+    saveBtn.on('click',saveInput); // calling the saveInput function when save button is clicked
+
+    
 
 
     

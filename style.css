@@ -12,6 +12,17 @@ body {
   font-size: 1.6rem;
 }
 
+.reset{
+ position: absolute;
+ right: 50%;
+ top: 49%;
+ padding: 10px;
+ border-radius: 100px;
+ background-color: #A6B5D3;
+ 
+  
+}
+
 textarea{
   background: transparent;
   border: none;
