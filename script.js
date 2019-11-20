@@ -22,9 +22,9 @@ $(document).ready(function () {
     let hour = now.hour();
     let formatHour = now.format('ha');
     let timeBlocks = $(".time-block");
-   
 
-//setting colors to relevant time
+
+    //setting colors to relevant time
     for (let i = 0; i < timeBlocks.length; i++) {
         let blockTime = $(timeBlocks[i]);
         let hourId = blockTime.attr("id");
@@ -42,31 +42,42 @@ $(document).ready(function () {
 
     let textArea = $("#text-area"); //comment input
     let saveBtn = $(".saveBtn"); //save button
+
+    //setting a function for save button clicked 
+    function saveInput(event){
+        event.preventDefault();
+      let hour =  $(this).parent().parent().attr("id");
+      let input = $(this).siblings("textarea").val();
+      localStorage.setItem(hour,input);
+    }
     
 
-    let storedValue = JSON.parse(localStorage.getItem('text'));
-    if (storedValue) {
-        textArea.html(storedValue);
-    }
+    let nine = $("#9am").children(".row").children("textarea");
+    let ten = $("#10am").children(".row").children("textarea");
+    let eleven = $("#11am").children(".row").children("textarea");
+    let twelve = $("#12pm").children(".row").children("textarea");
+    let one = $("#1pm").children(".row").children("textarea");
+    let two = $("#2pm").children(".row").children("textarea");
+    let three = $("#3pm").children(".row").children("textarea");
+    let four = $("#4pm").children(".row").children("textarea");
+    let five = $("#5pm").children(".row").children("textarea");
 
-    $(".saveBtn").on("click", function (event) {
-        event.preventDefault();
-        localStorage.setItem('text', JSON.stringify(textArea.val()));
+    nine.text(localStorage.getItem("9am"));
+    ten.text(localStorage.getItem("10am"));
+    eleven.text(localStorage.getItem("11am"));
+    twelve.text(localStorage.getItem("12pm"));
+    one.text(localStorage.getItem("1pm"));
+    two.text(localStorage.getItem("2pm"));
+    three.text(localStorage.getItem("3pm"));
+    four.text(localStorage.getItem("4pm"));
+    five.text(localStorage.getItem("5pm"));
 
-    });
-
-
-
-
-
-
-
-
+    saveBtn.on('click',saveInput);
 
 
+    
 
-
-
+     
 
 
 
