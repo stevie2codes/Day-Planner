@@ -76,8 +76,10 @@ $(document).ready(function () {
     saveBtn.on('click',saveInput); // calling the saveInput function when save button is clicked
 
     
-
-
+    $(".reset").on("click",function(){
+        localStorage.clear();
+       location.reload();
+    })
     
 
      

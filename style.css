@@ -13,14 +13,19 @@ body {
 }
 
 .reset{
- position: absolute;
- right: 50%;
- top: 49%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  width: 8vw;
  padding: 10px;
- border-radius: 100px;
+ border-radius: 80px;
  background-color: #A6B5D3;
- 
-  
+}
+.reset:hover{
+  transform: scale(1.08);
+  transition: all ease-in 200ms;
+  box-shadow: black 0 0 3px;
 }
 
 textarea{
