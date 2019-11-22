@@ -1,34 +1,34 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
   background-color: white;
 }
 
-.lead{
+.lead {
   font-size: 2rem;
 }
-.far{
+.far {
   font-size: 1.6rem;
 }
 
-.reset{
+.reset {
   cursor: pointer;
   display: flex;
   justify-content: center;
   margin: 10px auto;
   width: 8vw;
- padding: 10px;
- border-radius: 80px;
- background-color: #A6B5D3;
+  padding: 10px;
+  border-radius: 80px;
+  background-color: #a6b5d3;
 }
-.reset:hover{
+.reset:hover {
   transform: scale(1.08);
   transition: all ease-in 200ms;
   box-shadow: black 0 0 3px;
 }
 
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -45,11 +45,11 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
+.description {
   white-space: pre-wrap;
 }
 
-.time-block{
+.time-block {
   text-align: center;
   border-radius: 15px;
   /* background-color: #d3d3d3; */
@@ -58,12 +58,12 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
 }
 
 .hour {
   margin-bottom: -20px;
-  
+
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
@@ -88,11 +88,11 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color:  #3691EF; 
+  background-color: #3691ef;
   color: white;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

@@ -1,15 +1,3 @@
-// The app should display standard business hours (9 a.m. to 5 p.m.).
-//  Each time slot should represent one hour and contain the following:
-
-// * The time
-
-// * A field to hold user input
-
-// * A save button
-
-// Clicking on the save button will store the time and user input in `localStorage`.
-
-
 
 $(document).ready(function () {
 
@@ -43,15 +31,15 @@ $(document).ready(function () {
     // let textArea = $("#text-area"); //comment input
     let saveBtn = $(".saveBtn"); //save button
 
-    //setting a function for save button clicked 
+    //setting a function for save button clicked  to store relevant text area input
     function saveInput(event) {
         event.preventDefault();
-      let hour =  $(this).parent().parent().attr("id");
-      let input = $(this).siblings("textarea").val();
-      localStorage.setItem(hour,input);
+        let hour = $(this).parent().parent().attr("id");
+        let input = $(this).siblings("textarea").val();
+        localStorage.setItem(hour, input);
     };
-    
-// setting variables that target the specific textarea
+
+    // setting variables that target the specific textarea
     let nine = $("#9am").children(".row").children("textarea");
     let ten = $("#10am").children(".row").children("textarea");
     let eleven = $("#11am").children(".row").children("textarea");
@@ -73,16 +61,17 @@ $(document).ready(function () {
     four.text(localStorage.getItem("4pm"));
     five.text(localStorage.getItem("5pm"));
 
-    saveBtn.on('click',saveInput); // calling the saveInput function when save button is clicked
+    saveBtn.on('click', saveInput);
+    // calling the saveInput function when save button is clicked
 
-    
-    $(".reset").on("click",function(){
+
+    $(".reset").on("click", function () {
         localStorage.clear();
-       location.reload();
+        location.reload();
     })
-    
 
-     
+
+
 
 
 
